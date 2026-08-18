@@ -1,12 +1,13 @@
-# Databases & In-Memory Caching
+# Databases
 
-Notes covering Amazon RDS, Amazon Aurora, Amazon DynamoDB, Amazon DocumentDB, Amazon Keyspaces, Amazon Neptune, Amazon OpenSearch, AWS DMS, Amazon ElastiCache, and Amazon MemoryDB.
+Notes covering Amazon RDS, Amazon Aurora, Amazon DynamoDB, Amazon DocumentDB, Amazon Keyspaces, Amazon Neptune, AWS DMS, Amazon ElastiCache, and Amazon MemoryDB.
 
 ---
 
 ## 1. <img src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/aws-rds.svg" width="40" height="40" valign="middle" /> Amazon RDS (Relational Database Service)
 - **Category**: Managed Relational SQL Database
 - **Core Purpose**: Managed SQL database supporting MySQL, PostgreSQL, MariaDB, Oracle, and SQL Server.
+- **Why Use It**: To run traditional SQL databases (MySQL, Postgres, SQL Server) without managing OS backups, patches, or setup manually.
 
 ### Key Concepts
 - **Automated Management**: Handles OS patching, automated backups, and storage auto-scaling.
@@ -17,6 +18,7 @@ Notes covering Amazon RDS, Amazon Aurora, Amazon DynamoDB, Amazon DocumentDB, Am
 ## 2. <img src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/aws-aurora.svg" width="40" height="40" valign="middle" /> Amazon Aurora & Aurora Serverless
 - **Category**: High-Performance Relational SQL
 - **Core Purpose**: AWS-native enterprise relational database compatible with MySQL and PostgreSQL.
+- **Why Use It**: For high-performance enterprise SQL speed (up to 5x faster) with auto-scaling compute that scales down to zero when idle.
 
 ### Key Concepts
 - **High Performance**: Up to 5x faster than standard MySQL and 3x faster than standard PostgreSQL.
@@ -27,6 +29,7 @@ Notes covering Amazon RDS, Amazon Aurora, Amazon DynamoDB, Amazon DocumentDB, Am
 ## 3. <img src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/aws-dynamodb.svg" width="40" height="40" valign="middle" /> Amazon DynamoDB
 - **Category**: Managed NoSQL Key-Value Store
 - **Core Purpose**: Fully managed serverless NoSQL database providing single-digit millisecond performance at scale.
+- **Why Use It**: When you need single-digit millisecond NoSQL performance that scales infinitely with zero server management.
 
 ### Key Concepts
 - **Extreme Predictability**: Optimized for key-value lookups and fast transactional read/writes.
@@ -37,6 +40,7 @@ Notes covering Amazon RDS, Amazon Aurora, Amazon DynamoDB, Amazon DocumentDB, Am
 ## 4. <img src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/aws-documentdb.svg" width="40" height="40" valign="middle" /> Amazon DocumentDB
 - **Category**: Managed Document NoSQL Database
 - **Core Purpose**: Fully managed MongoDB-compatible document database.
+- **Why Use It**: To run MongoDB document workloads reliably at scale using managed AWS infrastructure.
 
 ### Key Concepts
 - **MongoDB Compatibility**: Supports existing MongoDB drivers, queries, and tools.
@@ -47,6 +51,7 @@ Notes covering Amazon RDS, Amazon Aurora, Amazon DynamoDB, Amazon DocumentDB, Am
 ## 5. <img src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/aws-keyspaces.svg" width="40" height="40" valign="middle" /> Amazon Keyspaces
 - **Category**: Managed Wide-Column NoSQL Database
 - **Core Purpose**: Managed Apache Cassandra-compatible database service.
+- **Why Use It**: To run Apache Cassandra workloads without managing complex server clusters.
 
 ### Key Concepts
 - **Cassandra Compatibility**: Run Cassandra workloads in AWS without managing Cassandra clusters.
@@ -56,6 +61,7 @@ Notes covering Amazon RDS, Amazon Aurora, Amazon DynamoDB, Amazon DocumentDB, Am
 ## 6. <img src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/aws-neptune.svg" width="40" height="40" valign="middle" /> Amazon Neptune
 - **Category**: Graph Database
 - **Core Purpose**: High-performance graph database optimized for connected datasets.
+- **Why Use It**: To store and query highly connected data like social networks, fraud detection graphs, and recommendation engines.
 
 ### Key Concepts
 - **Relationship Modeling**: Ideal for social network graphs, recommendation engines, and fraud detection patterns.
@@ -63,28 +69,20 @@ Notes covering Amazon RDS, Amazon Aurora, Amazon DynamoDB, Amazon DocumentDB, Am
 
 ---
 
-## 7. <img src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/aws-open-search.svg" width="40" height="40" valign="middle" /> Amazon OpenSearch
-- **Category**: Search Engine & Log Analytics NoSQL
-- **Core Purpose**: Managed search engine and log analytics tool (AWS fork of Elasticsearch).
-
-### Key Concepts
-- **Analytical & Fuzzy Search**: Used for Google-like autocomplete, full-text search, and log aggregation.
-- **Kibana Integration**: Native dashboards for real-time visualization of log data and metrics.
-
----
-
-## 8. <img src="https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/DatabaseMigrationService.png" width="40" height="40" valign="middle" /> AWS DMS (Database Migration Service)
+## 7. <img src="https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/DatabaseMigrationService.png" width="40" height="40" valign="middle" /> AWS DMS (Database Migration Service)
 - **Category**: Database Migration Tool
 - **Core Purpose**: Migrates databases to AWS securely with minimal application downtime.
+- **Why Use It**: To safely migrate existing on-premises or cloud databases to AWS with minimal application downtime.
 
 ### Key Concepts
 - **Heterogeneous & Homogeneous Migrations**: Supports migrating on-premises databases (e.g., Oracle/Postgres) directly to AWS (e.g., RDS/Aurora).
 
 ---
 
-## 9. <img src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/aws-elasticache.svg" width="40" height="40" valign="middle" /> Amazon ElastiCache
+## 8. <img src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/aws-elasticache.svg" width="40" height="40" valign="middle" /> Amazon ElastiCache
 - **Category**: In-Memory Caching (Redis & Memcached)
 - **Core Purpose**: Microsecond-latency in-memory caching layer to offload heavy database read queries.
+- **Why Use It**: To cache database queries in memory (Redis/Memcached) for microsecond speed and reduced database load.
 
 ### Key Concepts
 - **Microsecond Read Speeds**: In-memory data store using Redis or Memcached.
@@ -92,10 +90,10 @@ Notes covering Amazon RDS, Amazon Aurora, Amazon DynamoDB, Amazon DocumentDB, Am
 
 ---
 
-## 10. <img src="https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/MemoryDB.png" width="40" height="40" valign="middle" /> Amazon MemoryDB
+## 9. <img src="https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/MemoryDB.png" width="40" height="40" valign="middle" /> Amazon MemoryDB
 - **Category**: Persistent In-Memory Database (Redis-Compatible)
 - **Core Purpose**: Ultra-fast in-memory database built on Redis with durable multi-AZ data persistence.
+- **Why Use It**: When you need ultra-fast Redis performance combined with durable, multi-AZ permanent data persistence.
 
 ### Key Concepts
 - **Durable Redis Engine**: Unlike ElastiCache, MemoryDB logs all writes to a durable multi-AZ transaction log so no data is lost upon node restarts.
-- **Primary Database Capability**: Can be used as a microsecond primary database rather than just an ephemeral cache.
